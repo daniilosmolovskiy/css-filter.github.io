@@ -1,0 +1,38 @@
+.filteredImage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img {
+    margin: 15px;
+}
+.Blur {
+    filter: blur(20px);
+}
+.Brightness {
+    filter: brightness(120%);
+}
+.Contrast {
+    filter: contrast(50%);
+}
+.Grayscale {
+    filter: grayscale(36%);
+}
+.HueRotate {
+    filter: hue-rotate(120deg);
+}
+.Invert {
+    filter: invert(75%);
+}
+.Opacity {
+    filter: opacity(50%);
+}
+.Saturate {
+    filter: saturate(20%);
+}
+.Sepia {
+    filter: sepia(50%);
+}
+.DropShadow {
+    filter: drop-shadow(20px 20px 5px);
+}
