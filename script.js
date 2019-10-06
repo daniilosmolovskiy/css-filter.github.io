@@ -15,19 +15,7 @@ fileSelect.addEventListener("click", function (e) {
 
 fileElem.onchange = function() {
     handleFiles(this.files);
-    console.log(this.files);
-    if (this.files[0].size >= 304096) { 
-      alert( 
-        "File too Big, please select a file less than 4mb"); 
-        return;
-  } else if (file < 2048) { 
-      alert( 
-        "File too small, please select a file greater than 2mb"); 
-  } else { 
-      document.getElementById('size').innerHTML = '<b>'
-      + file + '</b> KB'; 
-  };
-  handleFiles(); 
+  handleFiles(this.files); 
 };
 
 function handleFiles(files) {
@@ -59,7 +47,6 @@ function handleFiles(files) {
         currentFilter = img.cloneNode(false);
 
         currentFilter.classList.add(filter);  
-        console.log(filter);
 
         let filterNode = document.createElement('p');
         let filterNodeName = document.createElement('h2');
