@@ -15,11 +15,19 @@ fileSelect.addEventListener("click", function (e) {
 
 fileElem.onchange = function() {
     handleFiles(this.files);
-    // if(this.files[0].size > 307200){
-    //    alert("File is too big!");
-    //    this.value = "";
-    //    return ;
-    // };
+    console.log(this.files);
+    if (this.files[0].size >= 304096) { 
+      alert( 
+        "File too Big, please select a file less than 4mb"); 
+        return;
+  } else if (file < 2048) { 
+      alert( 
+        "File too small, please select a file greater than 2mb"); 
+  } else { 
+      document.getElementById('size').innerHTML = '<b>'
+      + file + '</b> KB'; 
+  };
+  handleFiles(); 
 };
 
 function handleFiles(files) {
